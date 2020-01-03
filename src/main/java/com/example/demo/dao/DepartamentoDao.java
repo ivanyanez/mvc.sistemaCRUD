@@ -3,7 +3,7 @@ package com.example.demo.dao;
 
 import java.util.List;
 
-import com.mballem.curso.boot.domain.Departamento;
+import com.example.demo.web.domain.*;
 
 public interface DepartamentoDao {
 
