@@ -2,6 +2,8 @@ package com.example.demo.service;
 
 
 import com.example.demo.dao.DepartamentoDao;
+import com.example.demo.dao.DepartamentoDaoImpl;
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,33 +16,33 @@ import com.example.demo.web.domain.Departamento;
 public class DepartamentoServiceImpl implements DepartamentoService{
 	
 	@Autowired
-	private DepartamentoDao departamentodao;
+	private DepartamentoDaoImpl departamentodaoImpl;
 	
 
 @Override
 public void salvar(Departamento departamento) {
-    	departamentodao.save(departamento);
+    	departamentodaoImpl.save(departamento);
 }
 
 @Override
 public void editar(Departamento departamento) {
-	departamentodao.update(departamento);
+	departamentodaoImpl.update(departamento);
 }
 
 @Override
 public void excluir(Long id) {
-		departamentodao.delete(id);
+		departamentodaoImpl.delete(id);
 }
 
 @Override @Transactional(readOnly=true)
 public Departamento buscarPorID(Long Id) {
-	return departamentodao.findById(Id);
+	return departamentodaoImpl.findById(Id);
 }
 
 @Override @Transactional(readOnly=true)
 public List<Departamento> buscarTodos() {
 	
-	return departamentodao.findAll();
+	return departamentodaoImpl.findAll();
 }
 
 }
