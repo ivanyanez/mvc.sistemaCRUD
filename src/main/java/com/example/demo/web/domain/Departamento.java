@@ -1,8 +1,10 @@
 package com.example.demo.web.domain;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 
 @SuppressWarnings("serial")
+@Entity
 public class Departamento extends AbstractEntity<Long> {
 	
 	

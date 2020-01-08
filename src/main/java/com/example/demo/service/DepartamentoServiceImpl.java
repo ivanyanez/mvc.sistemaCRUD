@@ -1,7 +1,6 @@
 package com.example.demo.service;
 
 
-import com.example.demo.dao.DepartamentoDao;
 import com.example.demo.dao.DepartamentoDaoImpl;
 
 import java.util.List;
@@ -23,6 +22,7 @@ public class DepartamentoServiceImpl implements DepartamentoService{
 public void salvar(Departamento departamento) {
     	departamentodaoImpl.save(departamento);
 }
+
 
 @Override
 public void editar(Departamento departamento) {
