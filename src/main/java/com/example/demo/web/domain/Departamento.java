@@ -1,16 +1,20 @@
 package com.example.demo.web.domain;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
+
+import java.util.List;
+
+import javax.persistence.*;
 
 @SuppressWarnings("serial")
 @Entity
+@Table(name = "DEPARTAMENTOS")
 public class Departamento extends AbstractEntity<Long> {
-	
-	
-	
-	@Column(name="nome" , nullable = false, unique = true , length = 60)
+
+	@Column(name = "nome", nullable = false, unique = true, length = 60)
 	private String nome;
+	
+	@OneToMany(mappedBy = "departamento")
+	private List<Cargo> cargos;
 
 	public String getNome() {
 		return nome;
@@ -19,8 +23,13 @@ public class Departamento extends AbstractEntity<Long> {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	
 
-	
+	public List<Cargo> getCargos() {
+		return cargos;
+	}
+
+	public void setCargos(List<Cargo> cargos) {
+		this.cargos = cargos;
+	}
 	
 }

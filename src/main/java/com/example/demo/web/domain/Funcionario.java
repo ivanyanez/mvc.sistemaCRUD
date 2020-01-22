@@ -5,6 +5,8 @@ import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @SuppressWarnings("serial")
@@ -23,6 +25,10 @@ public class Funcionario extends AbstractEntity<Long> {
 	
 	@Column(name="dt_saida" , nullable = true , columnDefinition = "DATE")
 	private LocalDate dataSaida;
+	
+	@ManyToOne
+	@JoinColumn(name = "cargo_id_fk")
+	private Cargo cargo;
 	
 	/*
 	private Endereco endereco;
