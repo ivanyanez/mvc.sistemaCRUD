@@ -19,10 +19,12 @@
 	<link href="/css/style.css" rel="stylesheet" />
 </head>
 <body>
-	<header>
+	<header th:replace="fragments/header :: cabecalho">
 		<div>
 			<aside>
-					<span>menu</span>
+					<nav th:replace="fragments/sidebar :: nav-sidebar">
+					
+					</nav>
 			</aside>
 			
 		</div>
@@ -32,7 +34,7 @@
 		<div> Conteúdo Principal</div>
 	</section>
 	
-	<footer>
+	<footer th:replace="fragments/footer :: rodape">
 		<div>Footer</div>
 	</footer>
 	
