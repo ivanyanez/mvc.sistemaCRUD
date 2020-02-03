@@ -5,17 +5,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("funcionario")
+@RequestMapping("/funcionarios")
 public class FuncionarioController {
 	
 	
-	@GetMapping("cadastrar")
+	
+	@GetMapping("/cadastrar")
 	public String cadastrar() {
 		
 		return "/funcionario/cadastro";
 		
 	}
-	@GetMapping("listar")
+	@GetMapping("/listar")
 	public String listar() {
 		
 		return "/funcionario/lista";

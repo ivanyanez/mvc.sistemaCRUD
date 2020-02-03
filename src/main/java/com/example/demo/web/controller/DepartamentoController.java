@@ -5,15 +5,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("departamaento")
+@RequestMapping("/departamentos")
 public class DepartamentoController {
 	
-	@GetMapping("cadastrar")
+	@GetMapping("/cadastrar")
 	public String cadastrar() {
 		return "/departamento/cadastro";
 	}
 
-	@GetMapping("listar")
+	@GetMapping("/listar")
 	public String Listar() {
 		return "departamento/lista";
 		

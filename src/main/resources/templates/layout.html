@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt" xmlns="http://www.w3.org/1999/xhtml"
- xmlns:th="http://www.thymeleaf.org"
- xmlsn:layout="http://www.ultraq.net.nz/thymeleaf/Layout">
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
-	<title>Spring-Boot Básico</title>
+	<title>SisCad</title>
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -20,22 +20,23 @@
 </head>
 <body>
 	<header th:replace="fragments/header :: cabecalho">
-		<div>
-			<aside>
-					<nav th:replace="fragments/sidebar :: nav-sidebar">
-					
-					</nav>
-			</aside>
-			
-		</div>
+		<div>header</div>
 	</header>
 	
-	<section>
-		<div> Conteúdo Principal</div>
-	</section>
+	<div  class="layout-main">
+		<aside>
+			<nav th:replace="fragments/sidebar :: nav-sidebar">
+				<span>menu</span>
+			</nav>
+		</aside>
+		
+		<section layout:fragment="corpo">
+			<div>conteudo principal das páginas</div>
+		</section>
+	</div>
 	
 	<footer th:replace="fragments/footer :: rodape">
-		<div>Footer</div>
+		<div>footer</div>
 	</footer>
 	
 	<!-- Bootstrap core JavaScript
