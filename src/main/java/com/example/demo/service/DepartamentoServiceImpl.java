@@ -45,4 +45,11 @@ public List<Departamento> buscarTodos() {
 	return departamentodaoImpl.findAll();
 }
 
+@Override
+public boolean departamentoTemCargos(Long id) {
+	if(buscarPorID(id).getCargos().isEmpty()) {
+		return false;
+		} return true;
+	}
+
 }
